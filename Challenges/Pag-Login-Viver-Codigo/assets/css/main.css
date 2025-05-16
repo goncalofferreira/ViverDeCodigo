@@ -1,0 +1,285 @@
+/* Importa variáveis CSS (cores, fontes, etc.) */
+@import url("_variables.css");
+
+/* Base: usa box-sizing border-box globalmente para facilitar cálculos de tamanho */
+* {
+  box-sizing: border-box;
+}
+
+/* Fonte e tamanho base */
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+  font-family: "Poppins", sans-serif;
+}
+
+/* Corpo da página com background e cor de texto */
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--background);
+  color: #000;
+}
+
+/* Container centralizado com padding para espaçamento nas laterais */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem; /* 50px de espaçamento interno */
+}
+
+/* Box principal de login:
+   - flex container para as duas áreas (form e ilustração)
+   - largura fluida até 1200px
+   - bordas arredondadas e overflow hidden para recortar filhos
+*/
+.login {
+  position: relative; /* necessário para posicionar elementos absolutos filhos */
+
+  display: flex;
+  width: 100%;
+  max-width: 120rem; /* 1200px */
+  border-radius: 4rem;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+}
+
+/* Área do formulário (70% do espaço)
+   - padding interno generoso
+   - flex column para organizar campos
+   - gap para espaçamento uniforme entre grupos de campo
+*/
+.rectangle001 {
+  flex: 7; /* 70% */
+  padding: 8rem 6rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+/* Área da ilustração/painel direito (30% do espaço)
+   - pode ter imagem de fundo
+   - tamanho de cover para preencher
+*/
+.rectangle002 {
+  flex: 4; /* 40% */
+  background-color: var(--blue02);
+  border-radius: 4rem 0 0 4rem;
+  
+}
+
+/* Estilos para logo, texto de boas-vindas e título principal */
+.logo {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: var(--pink02);
+  margin-bottom: 1.5rem;
+}
+
+.welcome {
+  font-size: 1.2rem;
+  color: rgba(0, 0, 0, 0.7);
+  margin: 0 0 1rem;
+}
+
+h1 {
+  font-size: 3.4rem;
+  font-weight: 600;
+  margin: 0 0 3rem;
+}
+
+/* Formulário interno usando flex column com gap moderado
+   - ajustado gap para reduzir espaçamento entre label e input
+*/
+form {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 2rem;
+}
+
+/* Labels básicos sem margin extra, espaçamento controlado pelo gap do form */
+label {
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+/* Inputs com padding, borda arredondada e placeholder legível */
+input[type="email"],
+input[type="password"] ,
+input[type="text"] /* para mostrar password*/
+{
+  width: 100%;
+  padding: 1.4rem;
+  font-size: 1.6rem;
+  border: none;
+  border-radius: 0.8rem;
+  background-color: var(--blue02);
+  outline: none;
+}
+
+/* Foco acessível nos inputs */
+input:focus {
+  outline: 0.3rem solid var(--pink02);
+}
+
+/* Linha de label e link "Forgot Password" distribuídos com flex e gap */
+.label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+}
+
+.label-row a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+
+/* Botão de login com padding generoso, bordas arredondadas, hover e centralizado */
+.login-btn {
+  padding: 1.2rem 2.4rem;
+  font-size: 1.6rem;
+  border: none;
+  border-radius: 2.5rem;
+  background-color: var(--pink02);
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.5s;
+  /*transition: background 0.3s;*/
+  align-self: center; /* centraliza horizontalmente */  
+}
+
+.login-btn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.login-btn span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.login-btn:hover span {
+  padding-right: 25px;
+}
+
+.login-btn:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.or{    
+    margin-top: 2rem;
+    color: var(--blue01);
+    font-weight: 400;
+    align-self: center;
+}
+
+.social-login{
+    display: flex;    
+    gap: 1rem;    
+    align-self: center;
+}
+
+.social-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 10rem;      /* garante largura mínima */
+    padding: .5rem 2rem;    /* controla o espaço interno */    
+    border: 1px solid var(--blue02);
+    border-radius: 5rem;
+    transition: background 0.2s;
+}
+.social-login img{
+    width: 2.4rem;
+    height: 2.4rem;    
+}
+
+/*focus-within ativa-se sempre que o próprio elemento ou qualquer um dos seus descendentes recebe foco (por exemplo, via teclado com Tab, ou ao clicar) */
+.social-login .social-div:hover,    
+.social-login .social-div:focus-within { 
+  background: var(--blue02);
+}
+
+.signup-text{
+    align-self: center;
+}
+
+.signup-link{
+    text-decoration: none;    
+    color: var(--pink02);
+    font-weight: 400;
+}
+
+
+.image-layer {
+  position: absolute;
+  right: 0;
+  bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  pointer-events: none; /* impede que interfira com clique nos elementos abaixo */
+}
+
+.img-chair {
+  position: relative;
+  height: 55rem;
+  right: -4rem;
+  bottom: -2rem;
+  z-index: 2;
+  transform: rotate(-1deg);
+}
+
+.img-cactus {
+  position: relative;
+  height: 40rem;
+  right: 13rem;
+  bottom: 4rem;
+  z-index: 1;
+}
+
+
+.label-row2 {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;  
+}
+
+
+.material-symbols-outlined{
+  position: absolute;
+  margin: 1rem;
+  color: var(--eye-show-color);
+  cursor: pointer;
+}
+
+/* Responsividade: em telas menores, empilha áreas */
+@media (max-width: 768px) {
+  .login {
+    flex-direction: column;
+    max-width: 90rem; /* 900px */
+  }
+  .rectangle001,
+  .rectangle002 {
+    flex: none;
+    width: 100%;
+    border-radius: 4rem;
+  }
+}
