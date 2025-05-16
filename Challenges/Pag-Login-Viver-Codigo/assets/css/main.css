@@ -266,7 +266,7 @@ input:focus {
 .material-symbols-outlined{
   position: absolute;
   margin: 1rem;
-  color: var(--eye-show-color);
+  color: var(--pink02);
   cursor: pointer;
 }
 

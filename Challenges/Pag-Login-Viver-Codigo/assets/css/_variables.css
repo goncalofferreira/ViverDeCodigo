@@ -3,8 +3,6 @@
 */
 
 :root{
-    /*--background: linear-gradient(#0083B0 61%, #DB009E 54%);*/
-
     --blue01: #0083B0;
     --blue02: #C0DBEA;
     --blue03: rgba(0, 131, 176, 0.61);;
@@ -12,8 +10,4 @@
     --pink02: #D885A3;
     --pink03: rgba(219, 0, 158, 0.54);
     --background: linear-gradient(90deg, var(--blue03), var(--pink03));
-    --eye-hide-color: var(--blue02);
-    --eye-show-color: var(--pink02);
-
-
 }
