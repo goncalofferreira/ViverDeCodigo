@@ -270,16 +270,47 @@ input:focus {
   cursor: pointer;
 }
 
-/* Responsividade: em telas menores, empilha áreas */
+/* Responsividade: em telas menores */
 @media (max-width: 768px) {
   .login {
     flex-direction: column;
-    max-width: 90rem; /* 900px */
+    max-width: 100%;
   }
-  .rectangle001,
+
   .rectangle002 {
-    flex: none;
+    display: none;
+  }
+
+  .rectangle001 {
     width: 100%;
-    border-radius: 4rem;
+    padding: 4rem 2rem;
+    align-items: center;    
+  }
+
+  .signup-text {
+    text-align: center;
+  }
+
+  /* Alinha labels à esquerda */
+  label {
+    display: block;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 0.5rem;
+    
+  }
+
+  input {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 8px;
+    border: none;
+    background-color: var(--blue02);
+    font-size: 1rem;
+  }
+
+  .form-group {
+    width: 100%;
+    margin-bottom: 1.5rem;
   }
 }
