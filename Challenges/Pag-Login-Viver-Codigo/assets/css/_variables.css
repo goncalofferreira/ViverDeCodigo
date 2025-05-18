@@ -5,9 +5,11 @@
 :root{
     --blue01: #0083B0;
     --blue02: #C0DBEA;
-    --blue03: rgba(0, 131, 176, 0.61);;
+    --blue03: rgba(0, 131, 176, 0.61);
+    --blue04: #6096B4;
     --pink01: #DB009E;
     --pink02: #D885A3;
     --pink03: rgba(219, 0, 158, 0.54);
+    --black01: #4C5049;
     --background: linear-gradient(90deg, var(--blue03), var(--pink03));
 }
