@@ -1,0 +1,77 @@
+/* Importa variáveis CSS (cores, fontes, etc.) */
+@import url("_variables.css");
+
+/* Base: usa box-sizing border-box globalmente para facilitar cálculos de tamanho */
+* {
+  box-sizing: border-box;
+}
+
+/* Fonte e tamanho base */
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+  font-family: "Poppins", sans-serif;
+}
+
+
+.grid-container{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 colunas iguais */
+  grid-template-rows: repeat(7, 1fr);    /* 7 linhas iguais */
+  grid-gap: 1rem;
+  padding: 1rem;
+  background-color: var(--green01);
+}
+
+.grid-container > div {
+  background-color: var(--white01);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  font-size: 4rem;
+}
+
+
+/*grid-area: row-start / column-start / row-end / column-end;*/
+.grid-container > .results {
+  position: relative;
+  grid-area: 1 / 1 / span 2 / span 4;
+  background-color: var(--green02);  
+}
+
+.itemEqual {
+  /* ocupa linhas 6 e 7 */
+  /* grid-column: 4;  só coluna 4 */
+  grid-area: 6 / 4 / span 2;
+}
+
+.grid-container > .results > .history {
+  /* border: 1px solid red; */
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: var(--black02);
+  font-size: 2rem;
+  pointer-events: none; /* evita interações */
+}
+
+
+.grid-container > .results > .output {
+  /* border: 1px solid blue; */
+  position: absolute;
+  top: 10rem;
+  right: 1rem;
+  color: var(--black01);
+  cursor: text;
+  font-size: 4rem;
+  text-align: right;
+
+}
+
+.btn {
+  cursor: pointer;  
+}
+
+.btn:hover {
+  background-color: var(--green02);  
+}
