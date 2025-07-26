@@ -1,9 +1,14 @@
 :root{
     --green01: #46B7B9;
     --green02: #C7E9EA;
+    --green03: #4feaf0fb;
     --blue03: rgba(0, 131, 176, 0.61);
     --white01: #fff;    
+    --white02: rgba(255, 255, 255, 0.4);
     --black01: #4C5049;
     --black02: rgba(76, 80, 73, 0.7);
-    --background: #E5E5E5;
+    --black03: rgba(0, 0, 0, 0.2);
+    --red01: #FF6B6B;
+    --orange01: #ffa07a;
+    
 }
